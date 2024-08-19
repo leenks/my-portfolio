@@ -1,10 +1,18 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import App from './App.tsx'
+import { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
+import App from './App.tsx';
+import { CssBaseline, ThemeProvider } from '@mui/material';
+import theme from './theme.ts';
 
+// Cria a raiz do aplicativo React
+const root = createRoot(document.getElementById('root')!);
 
-createRoot(document.getElementById('root')!).render(
+// Renderiza o aplicativo dentro do StrictMode, com ThemeProvider e CssBaseline
+root.render(
   <StrictMode>
-    <App />
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <App />
+    </ThemeProvider>
   </StrictMode>,
-)
+);

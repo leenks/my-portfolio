@@ -4,7 +4,7 @@ import { purple, green } from '@mui/material/colors'; // Importa as cores
 let theme = createTheme({
   palette: {
     primary: {
-      main: purple[500], // Cor primária
+      main:'#111111', // Cor primária
     },
     secondary: {
       main: green[500], // Cor secundária
